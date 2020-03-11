@@ -89,6 +89,10 @@ class App extends Component  {
    
     let state="";
     let cause=""
+    this.setState({
+      state,
+      cause
+    })
     this.getUpdateData(state,cause)
    }
 

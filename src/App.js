@@ -85,6 +85,13 @@ class App extends Component  {
    this.getUpdateData(state,cause)
   }
 
+  reset(){
+   
+    let state="";
+    let cause=""
+    this.getUpdateData(state,cause)
+   }
+
   componentDidMount(){
 
     fetch("https://jsonplaceholder.typicode.com/todos/1")
@@ -182,6 +189,7 @@ else
               <div class="field">
                 <label></label>
                 <button onClick={this.filter.bind(this)} style={{marginTop:'20px'}} class="ui secondary button">Filter</button>
+                <button onClick={this.reset.bind(this)} style={{marginTop:'20px'}} color='black' class="ui basic black button">Reset</button>
               </div>
             </div>
           </div>

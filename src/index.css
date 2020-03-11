@@ -27,3 +27,7 @@ body {
    
     font-weight: bold;
 }
+
+.ui.search.dropdown{
+  width: 100%;
+}

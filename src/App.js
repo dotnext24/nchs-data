@@ -14,7 +14,7 @@ class App extends Component  {
       cells = [];
 
       for (var c = 0; c < 20; c++) {
-        cells.push(<Cell key={c}>{(r === 0 ? 'Header ' : 'Cell ') + c}</Cell>);
+        cells.push(<Cell className={(r === 0 ? 'th' : 'tr')} key={c}>{(r === 0 ? 'Header ' : 'Cell ') + c}</Cell>);
       }
 
       rows.push(<Row key={r}>{cells}</Row>);
@@ -53,7 +53,7 @@ class App extends Component  {
         
         <div class="grid-container" style={{width: '100%', height: '400px'}}>
 
-        <StickyTable stickyColumnCount={0}>{this.state.rows}</StickyTable>
+        <StickyTable >{this.state.rows}</StickyTable>
         </div>
         
         </div>

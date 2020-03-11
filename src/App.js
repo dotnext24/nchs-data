@@ -13,17 +13,7 @@ class App extends Component  {
     super(props);
 
     var rows = [];
-    var cells;
-
-    for (var r = 0; r < 50; r++) {
-      cells = [];
-
-      for (var c = 0; c < 20; c++) {
-        cells.push(<Cell className={(r === 0 ? 'th' : 'tr')} key={c}>{(r === 0 ? 'Header ' : 'Cell ') + c}</Cell>);
-      }
-
-      rows.push(<Row key={r}>{cells}</Row>);
-    }
+    var cells;   
 
     this.state = {
       isLoaded:false,
@@ -164,12 +154,12 @@ else
   <div class="sub header">This dataset presents the age-adjusted death rates for the leading causes of death.</div>
       </h2> */}
       <div class="ui fluid card" style={{marginTop:'20px'}}>
-        <div class="content"><div class="header">NCHS - Leading Causes of Death: United States</div></div>
+        <div class="content"><div class="header" style={{color:'#003d71'}}>NCHS - Leading Causes of Death: United States</div></div>
         <div class="content">
           <div class="ui form">
             <div class="equal width fields">
               <div class="field">
-                <label>State</label>
+                <label style={{color:'#003d71'}}>State</label>
                 <div class="ui input">
                   {/* <input name="state" value={this.state.state}
             onChange={this.handleChange} type="text" placeholder="State" /> */}
@@ -180,7 +170,7 @@ else
             </div>
               </div>
               <div class="field">
-                <label>Cause name</label>
+                <label style={{color:'#003d71'}}>Cause name</label>
                 <div class="ui input">
                 <Dropdown onChange={this.handleCauseDropdownChange.bind(this)} placeholder='Cause' search selection options={causes} value={this.state.cause} />
                   {/* <input name="cause" value={this.state.cause}
@@ -192,8 +182,8 @@ else
               </div>
               <div class="field">
                 <label></label>
-                <button onClick={this.filter.bind(this)} style={{marginTop:'20px'}} class="ui secondary button">Filter</button>
-                <button onClick={this.reset.bind(this)} style={{marginTop:'20px'}} color='black' class="ui basic black button">Reset</button>
+                <button style={{ backgroundColor:'#003d71 !important',marginTop:'20px'}} onClick={this.filter.bind(this)}  class="ui secondary button">Filter</button>
+                <button style={{ color: '#003d71 !important','border-color': '#003d71',marginTop:'20px'}} onClick={this.filter.bind(this)} onClick={this.reset.bind(this)} style={{marginTop:'20px'}} color='black' class="ui basic black button">Reset</button>
               </div>
             </div>
           </div>
